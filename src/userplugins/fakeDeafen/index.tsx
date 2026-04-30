@@ -4,6 +4,7 @@
  * SPDX-License-Identifier: GPL-3.0-or-later
  */
 
+import { Devs } from "@utils/constants";
 import ErrorBoundary from "@components/ErrorBoundary";
 import definePlugin from "@utils/types";
 import { findByProps, findComponentByCodeLazy } from "@webpack";
@@ -55,21 +56,21 @@ function fd_icon() {
 
     return (
         <svg width="20" height="20" viewBox="0 0 32 32" fill="none">
-            <rect x="6" y="8" width="20" height="4" rx="2" fill={iconColor}/>
-            <rect x="11" y="3" width="10" height="8" rx="3" fill={iconColor}/>
+            <rect x="6" y="8" width="20" height="4" rx="2" fill={iconColor} />
+            <rect x="11" y="3" width="10" height="8" rx="3" fill={iconColor} />
             {enabled ? (
                 <>
-                    <line x1="7" y1="18" x2="13" y2="24" stroke={iconColor} strokeWidth="2"/>
-                    <line x1="13" y1="18" x2="7" y2="24" stroke={iconColor} strokeWidth="2"/>
-                    <line x1="19" y1="18" x2="25" y2="24" stroke={iconColor} strokeWidth="2"/>
-                    <line x1="25" y1="18" x2="19" y2="24" stroke={iconColor} strokeWidth="2"/>
-                    <path d="M14 23c1-1 3-1 4 0" stroke={iconColor} strokeWidth="2" strokeLinecap="round"/>
+                    <line x1="7" y1="18" x2="13" y2="24" stroke={iconColor} strokeWidth="2" />
+                    <line x1="13" y1="18" x2="7" y2="24" stroke={iconColor} strokeWidth="2" />
+                    <line x1="19" y1="18" x2="25" y2="24" stroke={iconColor} strokeWidth="2" />
+                    <line x1="25" y1="18" x2="19" y2="24" stroke={iconColor} strokeWidth="2" />
+                    <path d="M14 23c1-1 3-1 4 0" stroke={iconColor} strokeWidth="2" strokeLinecap="round" />
                 </>
             ) : (
                 <>
-                    <circle cx="10" cy="21" r="4" stroke={iconColor} strokeWidth="2" fill="none"/>
-                    <circle cx="22" cy="21" r="4" stroke={iconColor} strokeWidth="2" fill="none"/>
-                    <path d="M14 21c1 1 3 1 4 0" stroke={iconColor} strokeWidth="2" strokeLinecap="round"/>
+                    <circle cx="10" cy="21" r="4" stroke={iconColor} strokeWidth="2" fill="none" />
+                    <circle cx="22" cy="21" r="4" stroke={iconColor} strokeWidth="2" fill="none" />
+                    <path d="M14 21c1 1 3 1 4 0" stroke={iconColor} strokeWidth="2" strokeLinecap="round" />
                 </>
             )}
         </svg>
@@ -96,7 +97,7 @@ function fd_button(props: { nameplate?: any; }) {
 export default definePlugin({
     name: "FakeDeafen",
     description: "Fake deafen yourself",
-    authors: [{ name: "hyyven", id: 449282863582412850n }],
+    authors: [Devs.sikilmem],
 
     start() {
         const wsModule = findByProps("getSocket");

@@ -130,8 +130,8 @@ async function runUpdateCheck() {
             await update();
             if (Settings.autoUpdateNotification) {
                 notify({
-                    title: "Vencord has been updated!",
-                    body: "Click here to restart",
+                    title: "Vencord guncellendi!",
+                    body: "Buraya tikla",
                     onClick: relaunch
                 });
             }
